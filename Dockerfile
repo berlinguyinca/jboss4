@@ -1,9 +1,9 @@
 FROM jboss/base:latest
+MAINTAINER Martin Callesen <martin.callesen@gmail.com>
 
 # Install java 1.6
 USER root
 RUN yum -y install java-1.6.0-openjdk --releasever=16 --nogpgcheck
-
 
 # Install JBOSS 4.2.2
 RUN yum -y install wget
