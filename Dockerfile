@@ -8,8 +8,7 @@ RUN yum -y install java-1.6.0-openjdk --releasever=16 --nogpgcheck
 # Install JBOSS 4.2.2
 RUN yum -y install wget
 USER jboss
-RUN cd $home && wget http://sourceforge.net/projects/jboss/files/JBoss/JBoss-4.2.2.GA/jboss-4.2.2.GA.zip
-RUN unzip jboss-4.2.2.GA.zip
+RUN cd $home && wget http://sourceforge.net/projects/jboss/files/JBoss/JBoss-4.2.2.GA/jboss-4.2.2.GA.zip && unzip jboss-4.2.2.GA.zip && rm jboss-4.2.2.GA.zip
 
 # Expose the ports we're interested in
 # Webserver is running on 8080 
