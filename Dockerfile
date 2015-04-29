@@ -10,6 +10,9 @@ RUN yum -y install wget
 USER jboss
 RUN cd $home && wget http://sourceforge.net/projects/jboss/files/JBoss/JBoss-4.2.2.GA/jboss-4.2.2.GA.zip && unzip jboss-4.2.2.GA.zip && rm jboss-4.2.2.GA.zip
 
+# Enable remote debugging 
+ENV JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000
+
 # Expose the ports we're interested in
 # Webserver is running on 8080 
 # Adminserver is running on 9990
