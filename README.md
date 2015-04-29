@@ -3,7 +3,7 @@ This is a repository containing a docker file with a jboss 4.2.2 running on java
 
 # Usage
 To build the image run :
-docker build -t tutum/jboss .
+docker build -t martincallesen/jboss4 .
 
 To run the image and bind to port :
 
