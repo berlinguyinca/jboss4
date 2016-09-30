@@ -16,5 +16,6 @@ EXPOSE 8080 9990 8000 1098 1099 3873 4444 4445 4446 8009 8083 8090 8092 8093
 # Configurations
 ENV JBOSS_HOME=/opt/jboss/jboss-4.2.2.GA
 
+ADD run.sh /opt/run.sh
 # Set the default command to run on boot
-CMD ["/opt/jboss/jboss-4.2.2.GA/bin/run.sh", "-b", "0.0.0.0", "-c", "all"]
+CMD ["/bin/bash", "/opt/run.sh"]
