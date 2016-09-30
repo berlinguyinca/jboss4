@@ -1,14 +1,6 @@
 # Jboss4
-This is a repository containing a docker file with a jboss 4.2.2 running on java 1.6 
+This is a repository containing a docker file with a jboss 4.2.2 running on java 1.7 and allowing you to specify the public host, so that ejb rmi connections are able to work correctly.
 
-# Usage
-To build the image run :
-docker build -t martincallesen/jboss4 .
+Further documentation can be found at the official docker hub repository
 
-To run the image and bind to port :
-
-docker run -d -p 8000:8000 -p 8080:8080 -p 9990:9990 martincallesen/jboss4
-
-The first time that you run your container, a new user admin with all privileges will be created in JBoss with a random password. To get the password, check the logs of the container by running:
-
-docker logs <CONTAINER_ID>
+https://hub.docker.com/r/berlinguyinca/jboss4/
